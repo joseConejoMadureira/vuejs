@@ -3,7 +3,7 @@
   <li v-for="todo in sortedTasks" class="todo">
   <div class="view">
     <input class="toggle" @click="completeTask(todo)" type="checkbox">
-    <label v-if="todo.completed" class="todo.completed"> {{ todo.title }}</label>
+    <label v-if="todo.completed" class="todo-completed"> {{ todo.title }}</label>
     <label v-else> {{ todo.title }}</label>
   </div>
   </li>
