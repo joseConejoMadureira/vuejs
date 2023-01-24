@@ -1,9 +1,10 @@
 <template>
 <ul class="todo-list">
-  <li v-for="todo in todoList" class="todo">
+  <li v-for="todo in sortedTasks" class="todo">
   <div class="view">
-    <input class="toggle" type="checkbox">
-    <label> {{ todo.title }}</label>
+    <input class="toggle" @click="completeTask(todo)" type="checkbox">
+    <label v-if="todo.completed" class="todo.completed"> {{ todo.title }}</label>
+    <label v-else> {{ todo.title }}</label>
   </div>
   </li>
 </ul>
@@ -26,11 +27,18 @@ export default {
         this.todoList.concat(novaLista)
       }
     }
+  },
+  methods: {
+    completeTask (task) {
+      task.completed = !task.completed
+    }
   }
 }
 
 </script>
 
 <style>
-
+.todo-completed{
+    text-decoration: line-through;
+}
 </style>
