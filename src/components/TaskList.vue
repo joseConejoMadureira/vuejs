@@ -2,6 +2,7 @@
 <ul class="todo-list">
   <li v-for="todo in todoList" class="todo">
   <div class="view">
+    <input class="toggle" type="checkbox">
     <label> {{ todo.title }}</label>
   </div>
   </li>
