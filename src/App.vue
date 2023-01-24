@@ -12,15 +12,6 @@
 import InputTask from './components/InputTask.vue'
 import Tasklist from './components/TaskList.vue'
 
-import { Task } from './models/Task'
-let tasks = []
-let task = new Task()
-task.completed = false
-task.title = 'tarefa'
-tasks.push(task)
-tasks.push(task)
-tasks.push(task)
-
 export default {
   name: 'App',
   components: {
@@ -29,7 +20,7 @@ export default {
   },
   data () {
     return {
-      tasks: tasks
+      tasks: []
     }
   },
   methods: {
