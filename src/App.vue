@@ -1,28 +1,21 @@
 <template>
-<section class="todoapp">
-<header class="header">
-  <h1>Tarefas</h1>
-</header>
-</section>
+  <section class="todoapp">
+    <header class="header">
+      <h1>Tarefas</h1>
+      <input-Task></input-Task>
+    </header>
+  </section>
 </template>
 
 <script>
+import InputTask from './components/InputTask.vue'
 
 export default {
   name: 'App',
-  components: {
-
-  }
+  components: {InputTask}
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
