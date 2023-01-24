@@ -3,7 +3,7 @@
     <header class="header">
       <h1>Tarefas</h1>
     </header>
-    <input-Task></input-Task>
+    <input-Task @newTask="addTask"></input-Task>
     <tasklist :todo-list="tasks"></tasklist>
   </section>
 </template>
@@ -31,7 +31,13 @@ export default {
     return {
       tasks: tasks
     }
+  },
+  methods: {
+    addTask (task) {
+      this.tasks.push(task)
+    }
   }
+
 }
 
 </script>
