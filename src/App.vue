@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+<section class="todoapp">
+<header class="header">
+  <h1>Tarefas</h1>
+</header>
+</section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
   }
 }
 </script>
